@@ -5,32 +5,24 @@ import PackageDescription
 let package = Package(
     name: "ConvivaBrightcove",
     platforms: [
-        .iOS(.v12)
+        .iOS(.v12),
+        .tvOS(.v12)
     ],
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "ConvivaBrightcove",
-            targets: ["ConvivaBrightcoveTarget"])
+            targets: ["ConvivaBrightcove", "ConvivaSDK"])
     ],
     targets: [
         .binaryTarget(
             name: "ConvivaBrightcove",
-            url: "https://github.com/Conviva/ConvivaBrightcove/raw/4.0.31/Framework/ConvivaBrightcove/ConvivaBrightcove.xcframework.zip",
-            checksum: "2f5913aae7705285cc47d359879d4b8a57c12f119ca9b7e39e388e416f83e3a8"),
+            url: "https://github.com/Conviva/ConvivaBrightcove/releases/download/4.0.33/Framework/ConvivaBrightcove.xcframework.zip",
+            checksum: "bf5ea4227355ba54bdfe2bc528e4a793731e3127d46baca408606dd3abe4bf02"),
         
         .binaryTarget(
-            name: "ConvivaSDK",
-            url: "https://github.com/Conviva/ConvivaSDK/raw/4.0.43/Framework/ConvivaSDK.xcframework.zip",
-            checksum: "a62100f18feaacb6ea6bbf99d9a50ecf87ed60d605de304bce743d13e2e0cbe0"),
-
-        .target(
-              name: "ConvivaBrightcoveTarget",
-              dependencies: [
-                .target(name: "ConvivaSDK"),
-                .target(name: "ConvivaBrightcove")
-              ],
-              path: "PlatformExcludes"
-            )
+                name: "ConvivaSDK",
+                url: "https://github.com/Conviva/ConvivaSDK/releases/download/4.3.1/ConvivaSDK.xcframework.zip",
+                checksum: "008c8932490a67858844178eef026a05f2b8e9fb1e95995362e3a26e7174e335")
      ]
 )
