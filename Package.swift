@@ -17,7 +17,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ConvivaBrightcove",
-            url: "https://github.com/Conviva/ConvivaBrightcove/releases/download/4.0.33/Framework/ConvivaBrightcove.xcframework.zip",
+            url: "https://github.com/Conviva/ConvivaBrightcove/releases/download/4.0.33/ConvivaBrightcove.xcframework.zip",
             checksum: "bf5ea4227355ba54bdfe2bc528e4a793731e3127d46baca408606dd3abe4bf02"),
         
         .binaryTarget(
